@@ -12,11 +12,11 @@ $(document).ready(function()
 		room.set("downvotes", 0);
 		room.set("answered", false); 
 		room.save(null, {
-	  		success: function(gameScore) {
+	  		success: function(Classroom) {
 	    		// Execute any logic that should take place after the object is saved.
 	    		alert('New object created with objectId: ' + room.id);
 	  		},
-	  		error: function(gameScore, error) {
+	  		error: function(Classroom, error) {
 	    		// Execute any logic that should take place if the save fails.
 	    		// error is a Parse.Error with an error code and message.
 	    		alert('Failed to create new object, with error code: ' + error.message);
