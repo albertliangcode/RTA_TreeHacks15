@@ -16,7 +16,7 @@ $(document).ready(function()
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
 		post.set("answered", false); 
-		// console.log("Post declared");
+		console.log("Post declared");
 
 		room.save(null, {
 	  		success: function(Classroom) {
