@@ -15,17 +15,17 @@ $(document).ready(function()
 		// post.set("answered", false); 
 
 		room.save(null, {
-			console.log("Entered save function");
+			//console.log("Entered save function");
 	  		success: function(Classroom) {
 	    		// Execute any logic that should take place after the object is saved.
 	    		alert('New object created with objectId: ' + room.id);
-	    		console.log("Win");
+	    		//console.log("Win");
 	  		},
 	  		error: function(Classroom, error) {
 	    		// Execute any logic that should take place if the save fails.
 	    		// error is a Parse.Error with an error code and message.
 	    		alert('Failed to create new object, with error code: ' + error.message);
-	  			console.log("Nope.");
+	  			//console.log("Nope.");
 	  		}
 		});
 
