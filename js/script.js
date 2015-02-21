@@ -1,22 +1,21 @@
 $(document).ready(function()
 {
-	console.log("js working");
 
 	$('#test').click(function(){
-		console.log("test working");
 		Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
 		var Classroom = Parse.Object.extend({
 			className: "Classroom"
 		});
 		var room = new Classroom();
-		console.log("Classroom declared");
+		room.set("name","");
+		room.set("numStudents",0);
+		room.set("inSession",false);
 		
 		var Post = Parse.Object.extend("Post");
 		var post = new Post();
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
 		post.set("answered", false); 
-		console.log("Post declared");
 
 		room.save(null, {
 	  		success: function(Classroom) {
@@ -27,7 +26,6 @@ $(document).ready(function()
 	    		// Execute any logic that should take place if the save fails.
 	    		// error is a Parse.Error with an error code and message.
 	    		alert('Failed to create new object, with error code: ' + error.message);
-	  			//console.log("Nope.");
 	  		}
 		});
 
@@ -40,7 +38,6 @@ $(document).ready(function()
 	    		// Execute any logic that should take place if the save fails.
 	    		// error is a Parse.Error with an error code and message.
 	    		alert('Failed to create new object, with error code: ' + error.message);
-	  			//console.log("Nope.");
 	  		}
 		});
 
