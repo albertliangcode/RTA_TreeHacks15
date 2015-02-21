@@ -8,3 +8,11 @@ Team Members:
 
 ...because hacking is an ART.
 
+
+
+Notes:
+- Using Parse to handle database
+	- as of 2/21/15:05:51, have not completed initialization test
+
+
+
