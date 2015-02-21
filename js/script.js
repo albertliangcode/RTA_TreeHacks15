@@ -29,18 +29,18 @@ $(document).ready(function()
 	  		}
 		});
 
-		post.save(null, {
-	  		success: function(Post) {
-	    		// Execute any logic that should take place after the object is saved.
-	    		alert('New object created with objectId: ' + post.id);
-	  		},
-	  		error: function(Post, error) {
-	    		// Execute any logic that should take place if the save fails.
-	    		// error is a Parse.Error with an error code and message.
-	    		alert('Failed to create new object, with error code: ' + error.message);
-	  			//console.log("Nope.");
-	  		}
-		});
+		// post.save(null, {
+	 //  		success: function(Post) {
+	 //    		// Execute any logic that should take place after the object is saved.
+	 //    		alert('New object created with objectId: ' + post.id);
+	 //  		},
+	 //  		error: function(Post, error) {
+	 //    		// Execute any logic that should take place if the save fails.
+	 //    		// error is a Parse.Error with an error code and message.
+	 //    		alert('Failed to create new object, with error code: ' + error.message);
+	 //  			//console.log("Nope.");
+	 //  		}
+		// });
 
 		var TestObject = Parse.Object.extend("TestObject");
 		var testObject = new TestObject();
