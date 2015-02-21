@@ -9,18 +9,16 @@ $(document).ready(function()
 		var room = new Classroom();
  
  		console.log("Classroom declared");
-		// var Post = Parse.Object.Classroom.extend("Post");
-		// var post = new Post();
-		// post.set("upvotes", 0);
-		// post.set("downvotes", 0);
-		// post.set("answered", false); 
+		var Post = Parse.Object.Classroom.extend("Post");
+		var post = new Post();
+		post.set("upvotes", 0);
+		post.set("downvotes", 0);
+		post.set("answered", false); 
 
 		room.save(null, {
-			//console.log("Entered save function");
 	  		success: function(Classroom) {
 	    		// Execute any logic that should take place after the object is saved.
 	    		alert('New object created with objectId: ' + room.id);
-	    		//console.log("Win");
 	  		},
 	  		error: function(Classroom, error) {
 	    		// Execute any logic that should take place if the save fails.
