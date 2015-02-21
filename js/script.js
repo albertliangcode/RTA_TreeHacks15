@@ -1,15 +1,16 @@
 $('#test').click(function(){
-	var GameScore = Parse.Object.extend("GameScore");
-	var gameScore = new GameScore();
+	var Classroom = Parse.Object.extend("Classroom");
+	var room = new Classroom();
  
-	gameScore.set("score", 1337);
-	gameScore.set("playerName", "Sean Plott");
-	gameScore.set("cheatMode", false);
+	var Post = Parse.Object.extend
+	room.set("upvotes", 0);
+	room.set("downvotes", 0);
+	room.set("answered", false);
  
-	gameScore.save(null, {
+	room.save(null, {
 	  success: function(gameScore) {
 	    // Execute any logic that should take place after the object is saved.
-	    alert('New object created with objectId: ' + gameScore.id);
+	    alert('New object created with objectId: ' + room.id);
 	  },
 	  error: function(gameScore, error) {
 	    // Execute any logic that should take place if the save fails.
