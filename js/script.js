@@ -4,10 +4,10 @@ $(document).ready(function()
 
 	$('#test').click(function(){
 		alert("test working");
-		var Classroom = Parse.Object.extend("Classroom");
+		var Classroom = Parse.Object;
 		var room = new Classroom();
  
-		var Post = Parse.Object.extend
+		var Post = Parse.Object.extend("Classroom");
 		room.set("upvotes", 0);
 		room.set("downvotes", 0);
 		room.set("answered", false); 
