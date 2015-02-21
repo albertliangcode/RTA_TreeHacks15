@@ -6,4 +6,5 @@ Team Members:
 - Rosemond Ho
 - Tony Wang
 
+...because hacking is an ART.
 
