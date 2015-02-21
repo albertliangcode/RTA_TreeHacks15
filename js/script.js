@@ -5,7 +5,9 @@ $(document).ready(function()
 	$('#test').click(function(){
 		console.log("test working");
 		Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
-		var Classroom = Parse.Object.extend("Classroom");
+		var Classroom = Parse.Object.extend({
+			className: "Classroom"
+		});
 		var room = new Classroom();
 		console.log("Classroom declared");
 		
