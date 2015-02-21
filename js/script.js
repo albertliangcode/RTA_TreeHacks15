@@ -1,11 +1,15 @@
 $('#test').click(function(){
-	var Classroom = Parse.Object.extend("Classroom");
+	var Classroom = Parse.Object;
 	var room = new Classroom();
+	room.set("name","");
+	room.set("numStudents",0);
+	room.set("inSession",false);
  
-	var Post = Parse.Object.extend
-	room.set("upvotes", 0);
-	room.set("downvotes", 0);
-	room.set("answered", false);
+	var Post = Parse.Object.extend("Classroom");
+	var post = new Post();
+	post.set("upvotes", 0);
+	post.set("downvotes", 0);
+	post.set("answered", false);
  
 	room.save(null, {
 	  success: function(gameScore) {
