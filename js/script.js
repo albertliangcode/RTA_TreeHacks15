@@ -9,12 +9,12 @@ $(document).ready(function()
 		var room = new Classroom();
 		console.log("Classroom declared");
 		
-		var Post = Parse.Object.Classroom.extend("Post");
-		var post = new Post();
-		post.set("upvotes", 0);
-		post.set("downvotes", 0);
-		post.set("answered", false); 
-		console.log("Post declared");
+		// var Post = Parse.Object.Classroom.extend("Post");
+		// var post = new Post();
+		// post.set("upvotes", 0);
+		// post.set("downvotes", 0);
+		// post.set("answered", false); 
+		// console.log("Post declared");
 
 		room.save(null, {
 	  		success: function(Classroom) {
