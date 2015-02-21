@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -24,7 +23,6 @@
 <body>
   <div class="container-fluid">
     <div id="header"></div>
-    <div class="row"><p id="title">Quintesstion<p></div>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="input-group">
