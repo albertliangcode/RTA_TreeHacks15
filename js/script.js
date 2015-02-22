@@ -22,7 +22,9 @@ $(document).ready(function(){
 					console.log("YUFAILSOHARD!?");
 				} else {
 					console.log(results.length);
+					console.log(results);
 					console.log("YAAASSS!!!!\n");
+
 				}
 			},
 			error: function(error){
