@@ -43,11 +43,10 @@ $(document).ready(function(){
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
 		post.set("answered", false);
-		var classrm = localStorage['id'];  
+		var classrm = search.get(localStorage['id']));  
 		post.set("classroom", classrm);
-		console.log(search.get(post.classroom));
-
-		console.log(post['classroom']);
+		console.log(classrm);
+		console.log(post.classroom);
 
 		post.save(null, {
 	  		success: function(Post) {
