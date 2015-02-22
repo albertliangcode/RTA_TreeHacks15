@@ -28,7 +28,7 @@ $(document).ready(function(){
 					console.log(results[0].id);
 					console.log("YAAASSS!!!!\n");
 					Classroom = search.get(results[0].id);
-					console.log(Classroom);
+					//console.log(Classroom);
 
 				}
 			},
