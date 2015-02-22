@@ -17,8 +17,13 @@ $(document).ready(function(){
 		search.equalTo("code",request);
 		search.find({
 			success: function(results){
-				console.log("YAAASSS!!!!\n");
-				console.log(results.length);
+				if(results.length != 1) {
+					console.log(results.length);
+					console.log("YUFAILSOHARD!?");
+				} else {
+					console.log(results.length);
+					console.log("YAAASSS!!!!\n");
+				}
 			},
 			error: function(error){
 				console.log("YUFAILSOHARD!?");
