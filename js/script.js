@@ -25,7 +25,7 @@ $(document).ready(function(){
 				}
 			},
 			error: function(error){
-				console.log("YUFAILSOHARD!?");
+				console.log("Program encountered fatal error during search.");
 			}
 		});
 	});
