@@ -1,6 +1,14 @@
 $(document).ready(function(){
+
+	window.onLoad = function(){
+		//query
+		//list
+		//destroyAll
+	}
+
 	$('#classroom-enter').click(function(){
 		Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
+		event.preventDefault();
 		var request = $(this).value;
 		//var Classroom = Parse.Object.extend("Classroom");
 		var search = new Parse.Query(Classroom);
@@ -15,7 +23,6 @@ $(document).ready(function(){
 		});
 	});
 
-	//$('#test').click(function(){
 	$('#post').click(function(){
 		Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
 		
@@ -30,16 +37,19 @@ $(document).ready(function(){
 	  		success: function(Post) {
 	    		// Execute any logic that should take place after the object is saved.
 	    		//alert('New object created with objectId: ' + post.id);
+
+
+	    		/*************************
+				Rosemond's Code Goes Here!
+	  			**************************/
+
+
 	  		},
 	  		error: function(Post, error) {
 	    		// Execute any logic that should take place if the save fails.
 	    		// error is a Parse.Error with an error code and message.
 	    		alert('Failed to create new object, with error code: ' + error.message);
 	  		}
-
-	  	/*************************
-		Rosemond's Code Goes Here!
-	  	**************************/
 	  		
 		});
 
