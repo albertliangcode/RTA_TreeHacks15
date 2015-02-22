@@ -18,7 +18,7 @@ $(document).ready(function(){
 		search.find({
 			success: function(results){
 				console.log("YAAASSS!!!!\n");
-				console.log(results.size);
+				console.log(results);
 			},
 			error: function(error){
 				console.log("YUFAILSOHARD!?");
