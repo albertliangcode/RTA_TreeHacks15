@@ -3,7 +3,7 @@ var Classroom = Parse.Object.extend({
 	className: "Classroom"
 });
 var room = new Classroom();
-room.set("name","");
+room.set("code","");
 room.set("numStudents",0);
 room.set("inSession",false);
 
