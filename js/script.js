@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 	$('#post').click(function(){
 		//Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
-		
+		event.preventDefault();
 		var Post = Parse.Object.extend("Post");
 		var post = new Post();
 		post.set("question","");
