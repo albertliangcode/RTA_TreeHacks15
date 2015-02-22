@@ -2,6 +2,7 @@ $(document).ready(function(){
 	$('#classroom-enter').click(function(){
 		Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
 		var request = $(this).value;
+		var Classroom = Parse.Object.extend("Classroom");
 		var search = new Parse.Query(Parse.Object.Classroom);
 		search.equalTo("code",request);
 		search.find();
