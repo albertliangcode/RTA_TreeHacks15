@@ -10,10 +10,7 @@ Team Members:
 
 
 
-Notes:
-- Using Parse to handle database
-- Classes successfully declared
--
+
 
 
 
