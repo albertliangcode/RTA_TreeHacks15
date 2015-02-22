@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	$('#classroom-enter').click(function(){
 		event.preventDefault();
-		var request = $(this).value;
+		var request = $('#classroom-enter-form').val();
 		console.log(request);
 		var Classroom = Parse.Object.extend("Classroom");
 		var search = new Parse.Query(Classroom);
