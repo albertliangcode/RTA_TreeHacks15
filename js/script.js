@@ -43,8 +43,9 @@ $(document).ready(function(){
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
 		post.set("answered", false);
-		var classrm = (Classroom)search.get(localStorage['id']));  
+		var classrm = localStorage['id'];  
 		post.set("classroom", classrm);
+		console.log(search.get(localStorage[post.classroom]));
 
 		console.log(post.classroom);
 
