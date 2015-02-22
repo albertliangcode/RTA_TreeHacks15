@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
+
 	window.onLoad = function(){
 		//query
 		//list
@@ -7,7 +9,6 @@ $(document).ready(function(){
 	}
 
 	$('#classroom-enter').click(function(){
-		Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
 		event.preventDefault();
 		var request = $(this).value;
 		//var Classroom = Parse.Object.extend("Classroom");
@@ -24,7 +25,7 @@ $(document).ready(function(){
 	});
 
 	$('#post').click(function(){
-		Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
+		//Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
 		
 		var Post = Parse.Object.extend("Post");
 		var post = new Post();
