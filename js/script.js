@@ -24,6 +24,7 @@ $(document).ready(function(){
 				} else {
 					console.log(results.length);
 					console.log(results);
+					console.log(results[0]);
 					console.log(results[0].attributes.code);
 					console.log(results[0].id);
 					console.log("YAAASSS!!!!\n");
@@ -32,6 +33,7 @@ $(document).ready(function(){
 							Classroom = results[0];
 						}
 					});
+					console.log(results[0]);
 					console.log(Classroom);
 				}
 			},
