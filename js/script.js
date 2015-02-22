@@ -17,7 +17,7 @@ $(document).ready(function(){
 			success: function(results){
 				if(results.length != 1) {
 					console.log(results.length);
-					console.log("YUFAILSOHARD!?");
+					console.log("Illegal number of hits.");
 				} else {
 					localStorage['id'] = results[0].id;
 					console.log(results[0].id);
@@ -25,7 +25,7 @@ $(document).ready(function(){
 				}
 			},
 			error: function(error){
-				console.log("YUFAILSOHARD!?");
+				console.log("Program encountered fatal error during search.");
 			}
 		});
 	});
