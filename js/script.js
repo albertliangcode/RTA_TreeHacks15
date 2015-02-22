@@ -17,7 +17,8 @@ $(document).ready(function(){
 		search.equalTo("code",request);
 		search.find({
 			success: function(results){
-				console.log("YAAASSS!!!!");
+				console.log("YAAASSS!!!!\n");
+				console.log(results.size);
 			},
 			error: function(error){
 				console.log("YUFAILSOHARD!?");
