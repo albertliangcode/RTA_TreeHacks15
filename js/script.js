@@ -22,18 +22,7 @@ $(document).ready(function(){
 					console.log(results.length);
 					console.log("YUFAILSOHARD!?");
 				} else {
-					console.log(results.length);
-					console.log(results);
-					console.log(results[0]);
-					console.log(results[0].attributes.code);
-					console.log(results[0].id);
-					console.log("YAAASSS!!!!\n");
-					search.get(results[0].id, {
-						success: function(results) {
-							Classroom = results[0];
-						}
-					});
-					console.log(results[0]);
+					Classroom = results[0];
 					console.log(Classroom);
 				}
 			},
