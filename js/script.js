@@ -38,10 +38,12 @@ $(document).ready(function(){
 			success: function(results){
 				for (var i = 0; i < results.length; i++) { 
       				var object = results[i];
+      				//var $button = $("<button>", {id: object.id, text: "Upvote", class: "upvote-button"}); 
       				var $divRow = $("<div>", {id: "row"});
 	  				var $divColSecond = $("<div>", {class: "col-md-6 col-md-offset-3"}); 
 	  				var $innerText = $("<p></p>").text(object.get("upvotes") + " upvotes. " + object.get('question'));
 	  				$divColSecond.append($innerText);
+	  				//$divRow.append($button);
 	  				$divRow.append($divColSecond);
 	    			$('#post-container').prepend($divRow);
     			}
@@ -50,6 +52,25 @@ $(document).ready(function(){
 				console.log("sir we have an error"); 	
 			}	
 		}); 
+	});
+
+	$('button').click(function(){
+		if($('button').attr('class') === 'upvote-button'){
+
+
+			var Post = Parse.Object.extend("Post");
+			var query = new Parse.Query(Post);
+			query.get($('.upvote-button').attr('id'), {
+				success: function(post){
+					post.set("upvotes", post.get("upvotes")+1);
+					post.save(null, {
+						success: function(post){ },
+						error: function(post){ }
+					}); 
+				}, 
+				error: function(post){ }
+			});
+		}
 	});
 
 	$('#post').click(function(){
