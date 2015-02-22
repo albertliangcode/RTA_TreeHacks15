@@ -45,9 +45,9 @@ $(document).ready(function(){
 		post.set("answered", false);
 		var classrm = localStorage['id'];  
 		post.set("classroom", classrm);
-		console.log(search.get(localStorage[post.classroom]));
+		console.log(search.get(post.classroom));
 
-		console.log(post.classroom);
+		console.log(post['classroom']);
 
 		post.save(null, {
 	  		success: function(Post) {
