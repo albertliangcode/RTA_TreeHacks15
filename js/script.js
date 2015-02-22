@@ -12,8 +12,9 @@ $(document).ready(function(){
 		event.preventDefault();
 		var request = $('#classroom-enter-form').val();
 		console.log(request);
-		var Classroom = Parse.Object.extend("Classroom");
-		var search = new Parse.Query(Classroom);
+		var Classroom;
+		var Classsearch = Parse.Object.extend("Classroom");
+		var search = new Parse.Query(Classsearch);
 		search.equalTo("code",request);
 		search.find({
 			success: function(results){
