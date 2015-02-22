@@ -37,10 +37,11 @@ $(document).ready(function(){
 		event.preventDefault();
 		var Post = Parse.Object.extend("Post");
 		var post = new Post();
-		post.set("question","");
+		post.set("question",$('#new-post-text').val());
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
-		post.set("answered", false); 
+		post.set("answered", false);
+		post.set("classroom", "object here");  
 
 		post.save(null, {
 	  		success: function(Post) {
