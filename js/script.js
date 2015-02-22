@@ -5,7 +5,14 @@ $(document).ready(function(){
 		var Classroom = Parse.Object.extend("Classroom");
 		var search = new Parse.Query(Classroom);
 		search.equalTo("code",request);
-		search.find();
+		search.find({
+			success: function(results){
+				console.log("YAAASSS!!!!");
+			},
+			error: function(error){
+				console.log("YUFAILSOHARD!?");
+			}
+		});
 	});
 
 	//$('#test').click(function(){
