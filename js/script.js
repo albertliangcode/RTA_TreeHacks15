@@ -11,6 +11,7 @@ $(document).ready(function(){
 	$('#classroom-enter').click(function(){
 		event.preventDefault();
 		var request = $(this).value;
+		console.log(request);
 		var Classroom = Parse.Object.extend("Classroom");
 		var search = new Parse.Query(Classroom);
 		search.equalTo("code",request);
