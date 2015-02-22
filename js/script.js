@@ -43,25 +43,31 @@ $(document).ready(function(){
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
 		post.set("answered", false);
+<<<<<<< Updated upstream
 		//var classrm = search.get(localStorage['id']);
 		var classrm = {location: "Here", time: "Now", subject: "the Universe"};
 		post.set("classroom", classrm);
 		//console.log(classrm);
 		//console.log(post.classroom);
 
+=======
+		post.set("classroom", "object here"); 
+>>>>>>> Stashed changes
 		post.save(null, {
-	  		success: function(Post) {
-	    		// Execute any logic that should take place after the object is saved.
-	    		//alert('New object created with objectId: ' + post.id);
-
-
-	    		/*************************
-				Rosemond's Code Goes Here!
-	  			**************************/
-
-
+	  		success: function(post) {
+	  			var $divRow = $("<div>", {id: "row"});
+	  			var $divColSecond = $("<div>", {class: "col-md-5 col-md-offset-3"}); 
+	  			var $divColFirst = $("<div>", {class: "col-md-1 col-md-offset-3"})
+	  			var $innerText = $("<p></p>").text($('#new-post-text').val());
+	  			console.log(post);
+	  			var $totalVotes = $("<h3></h3>").text(post.get("upvotes")); 
+	  			$divColFirst.append($totalVotes);
+	  			$divColSecond.append($innerText);
+	  			$divRow.append($divColFirst);
+	  			$divRow.append($divColSecond);
+	    		$('#post-container').prepend($divRow);
 	  		},
-	  		error: function(Post, error) {
+	  		error: function(post, error) {
 	    		// Execute any logic that should take place if the save fails.
 	    		// error is a Parse.Error with an error code and message.
 	    		alert('Failed to create new object, with error code: ' + error.message);
