@@ -3,9 +3,6 @@ $(document).ready(function(){
 	Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
 
 	window.onLoad = function(){
-		//query
-		//list
-		//destroyAll
 	}
 
 	$('#classroom-enter').click(function(){
@@ -23,6 +20,8 @@ $(document).ready(function(){
 					console.log("YUFAILSOHARD!?");
 				} else {
 					localStorage['id'] = results[0].id;
+					console.log(results[0].id);
+					window.location.href = "classroom.html"
 				}
 			},
 			error: function(error){
@@ -31,39 +30,44 @@ $(document).ready(function(){
 		});
 	});
 
+	$('#find').click(function(){
+		var Post = Parse.Object.extend("Post");
+		var query = new Parse.Query(Post);
+		query.equalTo("classroom", localStorage['id']);
+		query.find({
+			success: function(results){
+				for (var i = 0; i < results.length; i++) { 
+      				var object = results[i];
+      				var $divRow = $("<div>", {id: "row"});
+	  				var $divColSecond = $("<div>", {class: "col-md-6 col-md-offset-3"}); 
+	  				var $innerText = $("<p></p>").text(object.get("upvotes") + " upvotes. " + object.get('question'));
+	  				$divColSecond.append($innerText);
+	  				$divRow.append($divColSecond);
+	    			$('#post-container').prepend($divRow);
+    			}
+			},
+			error: function(error){
+				console.log("sir we have an error"); 	
+			}	
+		}); 
+	});
+
 	$('#post').click(function(){
 		//Parse.initialize("HnLswO6JpYmn4QrX2ClgADpA3HN2GFiVS1V95RP3", "IhuA6xPlWchDYpifcYQ39V18VAe9Dh44TgWBD2t1");
 		event.preventDefault();
 		var Post = Parse.Object.extend("Post");
 		var post = new Post();
-		var Classsearch = Parse.Object.extend("Classroom");
-		var search = new Parse.Query(Classsearch);
-
+		post.set("classroom", localStorage['id']);
 		post.set("question",$('#new-post-text').val());
-		post.set("upvotes", 0);
+		post.set("upvotes", 10);
 		post.set("downvotes", 0);
 		post.set("answered", false);
-<<<<<<< Updated upstream
-		//var classrm = search.get(localStorage['id']);
-		var classrm = {location: "Here", time: "Now", subject: "the Universe"};
-		post.set("classroom", classrm);
-		//console.log(classrm);
-		//console.log(post.classroom);
-
-=======
-		post.set("classroom", "object here"); 
->>>>>>> Stashed changes
 		post.save(null, {
 	  		success: function(post) {
 	  			var $divRow = $("<div>", {id: "row"});
-	  			var $divColSecond = $("<div>", {class: "col-md-5 col-md-offset-3"}); 
-	  			var $divColFirst = $("<div>", {class: "col-md-1 col-md-offset-3"})
-	  			var $innerText = $("<p></p>").text($('#new-post-text').val());
-	  			console.log(post);
-	  			var $totalVotes = $("<h3></h3>").text(post.get("upvotes")); 
-	  			$divColFirst.append($totalVotes);
+	  			var $divColSecond = $("<div>", {class: "col-md-6 col-md-offset-3"}); 
+	  			var $innerText = $("<p></p>").text(post.get("upvotes") + " upvotes. " + $('#new-post-text').val());
 	  			$divColSecond.append($innerText);
-	  			$divRow.append($divColFirst);
 	  			$divRow.append($divColSecond);
 	    		$('#post-container').prepend($divRow);
 	  		},
