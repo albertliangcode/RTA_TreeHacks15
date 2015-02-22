@@ -13,3 +13,15 @@
 	margin-top: 10px;
 	float: left;
 }
+
+#new-post {
+	margin-top: 100px;
+}
+
+#new-class {
+	margin-top: 100px;
+}
+
+li.navbar-text {
+	margin: 0px;
+}
