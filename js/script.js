@@ -22,8 +22,7 @@ $(document).ready(function(){
 					console.log(results.length);
 					console.log("YUFAILSOHARD!?");
 				} else {
-					Classroom = results[0];
-					console.log(Classroom);
+					localStorage['id'] = results[0].id;
 				}
 			},
 			error: function(error){
@@ -37,11 +36,15 @@ $(document).ready(function(){
 		event.preventDefault();
 		var Post = Parse.Object.extend("Post");
 		var post = new Post();
+		var Classsearch = Parse.Object.extend("Classroom");
+		var search = new Parse.Query(Classsearch);
+
 		post.set("question",$('#new-post-text').val());
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
 		post.set("answered", false);
-		post.set("classroom", "object here");  
+		post.set("classroom", search.get(localStorage['code']));  
+		console.log(post.classroom);
 
 		post.save(null, {
 	  		success: function(Post) {
