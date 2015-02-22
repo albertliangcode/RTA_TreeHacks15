@@ -27,9 +27,12 @@ $(document).ready(function(){
 					console.log(results[0].attributes.code);
 					console.log(results[0].id);
 					console.log("YAAASSS!!!!\n");
-					Classroom = search.get(results[0].id);
-					//console.log(Classroom);
-
+					search.get(results[0].id, {
+						success: function(results) {
+							Classroom = results[0];
+						}
+					});
+					console.log(Classroom);
 				}
 			},
 			error: function(error){
