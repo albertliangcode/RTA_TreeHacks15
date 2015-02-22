@@ -43,7 +43,7 @@ $(document).ready(function(){
 		post.set("upvotes", 0);
 		post.set("downvotes", 0);
 		post.set("answered", false);
-		post.set("classroom", search.get(localStorage['code']));  
+		post.set("classroom", search.get(localStorage['id']));  
 		console.log(post.classroom);
 
 		post.save(null, {
